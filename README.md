@@ -15,12 +15,14 @@ This project analyzes US regional sales data to uncover insights about:
 - **Channels**: In-Store, Online, Distributor, Wholesale
 
 ## Project Structure
+```
 us-regional-sales-analysis/
-- ├── data/              # Data files
-- ├── notebooks/         # Jupyter notebooks
-- ├── src/              # Source code
-- ├── reports/          # Generated reports and figures
-- └── requirements.txt  # Project dependencies
+├── data/              # Data files
+├── notebooks/         # Jupyter notebooks
+├── src/              # Source code
+├── reports/          # Generated reports and figures
+└── requirements.txt  # Project dependencies
+```
 
 ## Key Findings
 *[To be updated as analysis progresses]*
