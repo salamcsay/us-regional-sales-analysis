@@ -10,102 +10,117 @@
 
 - 🌎 Regional patterns and trends
 
-📦 Product performance analysis
+- 📦 Product performance analysis
 
-📅 Seasonal trends and patterns
+- 📅 Seasonal trends and patterns
 
-📂 Dataset
+**📂 Dataset**
 
-Source: US Regional Sales Data
+- Source: Kaggle - https://www.kaggle.com/datasets/talhabu/us-regional-sales-data
 
-Records: 7,991 sales transactions
+- Records: 7,991 sales transactions
 
-Time Period: 2018–2021
+- Time Period: 2018–2021
 
-Channels: 🏬 In-Store | 💻 Online | 🚚 Distributor | 📦 Wholesale
+- Channels: 🏬 In-Store | 💻 Online | 🚚 Distributor | 📦 Wholesale
 
-📁 Project Structure
+#### Reproducing data download (Kaggle)
+- Install Kaggle CLI (Linux):
+  - python3 -m pip install --user kaggle
+  - mkdir -p ~/.kaggle
+  - Place kaggle.json in ~/.kaggle (from Kaggle account settings)
+  - chmod 600 ~/.kaggle/kaggle.json
+- Download to data/raw (datasets):
+  - kaggle datasets download -d OWNER/DATASET_SLUG -p data/raw --unzip
+- If from a competition, use:
+  - kaggle competitions download -c COMPETITION_SLUG -p data/raw --unzip
 
-us-regional-sales-analysis/
-├── data/              # Data files
-├── notebooks/         # Jupyter notebooks
-├── src/               # Source code
-├── reports/           # Generated reports and figures
-└── requirements.txt   # Project dependencies
+After download, run the cleaning notebook:
+- jupyter nbconvert --to notebook --execute notebooks/01_exploratory_analysis_and_ data_cleaning.ipynb
 
-🔑 Key Findings
-🏬 Sales Channel Performance
+**📁 Project Structure**
 
-Market Leader: In-Store with 41% share, $30.1M revenue, $8.75M profit, 3,298 orders
+- us-regional-sales-analysis/
+- ├── data/              # Data files
+- ├── notebooks/         # Jupyter notebooks
+- ├── src/               # Source code
+- ├── reports/           # Generated reports and figures
+- └── requirements.txt   # Project dependencies
 
-Profitability: Wholesale has the highest ROI (43.2%); Distributor achieves the highest profit per order ($2,813)
+## 🔑 Key Findings
 
-Volatility: Online & In-Store are stable (CV ~21%); Wholesale is most volatile (CV 28.8%)
+**🏬 Sales Channel Performance**
 
-📈 Growth & Distribution
+- Market Leader: In-Store with 41% share, $30.1M revenue, $8.75M profit, 3,298 orders
 
-YoY Growth: Revenue +12.5%, Profit +14.1%, Orders +10.2%
+- Profitability: Wholesale has the highest ROI (43.2%); Distributor achieves the highest profit per order ($2,813)
 
-CAGR (2018–2020): Profit +13.2% > Revenue +11.8% > Orders +9.7%
+- Volatility: Online & In-Store are stable (CV ~21%); Wholesale is most volatile (CV 28.8%)
 
-Market Concentration: HHI = 3,023 → highly concentrated (dominated by In-Store & Online)
+**📈 Growth & Distribution**
 
-📦 Product Portfolio
+- YoY Growth: Revenue +12.5%, Profit +14.1%, Orders +10.2%
 
-Stars (17): Growth engines
+- CAGR (2018–2020): Profit +13.2% > Revenue +11.8% > Orders +9.7%
 
-Cash Cows (6): Steady performers
+- Market Concentration: HHI = 3,023 → highly concentrated (dominated by In-Store & Online)
 
-Question Marks (4): Selective investments
+**📦 Product Portfolio**
 
-Dogs (20): Candidates for phase-out
+- Stars (17): Growth engines
 
-Top Products: IDs 23, 40, 37, 41, 5 → ~40–45% of total revenue
+- Cash Cows (6): Steady performers
 
-Discount Sensitivity: Products 23, 5, 37 yield the highest revenue per discount point
+- Question Marks (4): Selective investments
 
-⏱️ Delivery Performance
+- Dogs (20): Candidates for phase-out
 
-Avg Processing: 5.6 days | Avg Delivery: 4.3 days | Avg Fulfillment: 5.1 days
+- Top Products: IDs 23, 40, 37, 41, 5 → ~40–45% of total revenue
 
-Fast Fulfillment: 63.5% of orders (Target >80%)
+- Discount Sensitivity: Products 23, 5, 37 yield the highest revenue per discount point
 
-Best Channel: In-Store (Composite Score: 4.2)
+**⏱️ Delivery Performance**
 
-Weakest Channel: Distributor (0.3)
+- Avg Processing: 5.6 days | Avg Delivery: 4.3 days | Avg Fulfillment: 5.1 days
 
-🏭 Warehouse Insights
+- Fast Fulfillment: 63.5% of orders (Target >80%)
 
-Top Revenue: WARE-NMK1003 ($23.1M)
+- Best Channel: In-Store (Composite Score: 4.2)
 
-Most Efficient: WARE-NBV1002 (Score: 10.7)
+- Weakest Channel: Distributor (0.3)
 
-Least Efficient: WARE-XYS1001 (Score: 0.0)
+**🏭 Warehouse Insights**
 
-Utilization: All warehouses underutilized (<3 daily orders)
+- Top Revenue: WARE-NMK1003 ($23.1M)
 
-🛠️ Technologies Used
+- Most Efficient: WARE-NBV1002 (Score: 10.7)
 
-🐍 Python
+- Least Efficient: WARE-XYS1001 (Score: 0.0)
 
-🐼 Pandas
+- Utilization: All warehouses underutilized (<3 daily orders)
 
-📊 Matplotlib & Seaborn
+**🛠️ Technologies Used**
 
-📈 Plotly
+- 🐍 Python
 
-📓 Jupyter Notebooks
+- 🐼 Pandas
 
-▶️ How to Run
+- 📊 Matplotlib & Seaborn
 
-Clone this repository
+- 📈 Plotly
 
-Install dependencies:
+- 📓 Jupyter Notebooks
 
-pip install -r requirements.txt
+**▶️ How to Run**
 
-un the Jupyter notebooks in the notebooks/ folder
+- Clone this repository
 
-👤 Author
+- Install dependencies:
 
-Abdou Ceesay – Data Analysis Project
+- pip install -r requirements.txt
+
+- Run the Jupyter notebooks in the notebooks/ folder
+
+## 👤 Author
+
+- Abdou Ceesay – Data Analysis Project
