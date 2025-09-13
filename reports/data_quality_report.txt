@@ -1,0 +1,16 @@
+DATA QUALITY REPORT
+==================================================
+
+Generated: 2025-09-12 20:48:30.754021
+
+DATASET OVERVIEW:
+- Records: 7,991
+- Features: 51
+- Memory: 4.10 MB
+
+DATA QUALITY METRICS:
+- Total Records: 7991
+- Total Features: 51
+- Memory Usage (MB): 4.099167823791504
+- Duplicate Records: 0
+- Missing Values: 0
